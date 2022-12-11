@@ -9,9 +9,6 @@ function App() {
 
   return (
     <div className='bg-black h-screen'>
-      <p className='text-white'>i am swopnil</p>
-      <p className='text-white'>i am working </p> 
-      {/* <New/> */}
       <SetOperations/>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {useForm} from 'react-hook-form'
+import  FuzzySet  from './FuzzySet';
 
 export default function New() {
     const {register,handleSubmit,watch} = useForm({
@@ -90,6 +91,8 @@ export default function New() {
             {/* unio = {unio}; */}
     </div>
         <p className='text-green-700 font-bold' >common show some respect</p>
+        <FuzzySet/>
     </div>
+
   )
 }

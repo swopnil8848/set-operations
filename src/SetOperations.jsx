@@ -24,7 +24,6 @@ export default function SetOperations() {
         };
         
         function func_unionn(set1,set2){
-            console.log(union);
             return removeDuplicates([...set1,...set2]).join(',')
         }
         
@@ -35,9 +34,7 @@ export default function SetOperations() {
         const setb = second.filter(c=>c!='');
 // so form here on out we are gonna use set1 and set 2 as our main sets for set_operations;
         const set1 = removeDuplicates(seta);
-        console.log(set1,"set1:::");
         const set2 = removeDuplicates(setb);
-        console.log(set2,"set2:::");
         
         //for union
         union = func_unionn(set1,set2);
@@ -48,36 +45,18 @@ export default function SetOperations() {
 
         let len_union = union.split(',').length;
         let uni = union.split(',');
-        console.log(uni,  "union");
         const arr = watch('universal').split(" ");
-        console.log(arr,"  universal");
-        console.log(len_union,"len_Union:::::")
         
         // to make sure all the items in the in the set a and b are contained by the universal set and if not display error
         uni.map(uni_item=>(!arr.includes(uni_item)? setCheck("0"):setCheck("1")));
 
-        // for complement of set A
-        // let comp_a = set1.filter(c=>!arr.includes(c));
-        // console.log("comp_a::::",comp_a);
+        // for complement of set 
         setComp1([arr.filter(c=>!set1.includes(c))].join(','));
         setComp2([arr.filter(c=>!set2.includes(c))].join(','));
-        // console.log("new value:::",arr.filter(c=>!set1.includes(c)))
-        // console.log("new value:::",typeof(arr.filter(c=>!set1.includes(c))));
-        
-        // for complement of set B
-        let comp_b = set2.filter(c=>!arr.includes(c));
-
-        // setComp2(comp_b);
             
     }, [watch()])
 
     const fuzzy = document.getElementsByClassName("fuzzy");
-    useEffect(() => {
-
-        console.log(fuzzy,"fuzzy::::");
-    
-      
-    }, [])
 
     const scrollToFuzzy = () =>{
         window.scrollTo({

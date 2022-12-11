@@ -22,7 +22,7 @@ const FuzzySet = () => {
             let b = a[0].split(",");
             console.log("b",b);
             return b;
-          });
+            });
 
           let first = set_first1.map(item=>item.filter(c=>c!='')).splice(1).map(u=>u.map(k=>parseInt(k)));
           console.log("first",first);

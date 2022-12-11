@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+import Factorial from './factorial';
 import FuzzySet from './FuzzySet';
 
 export default function SetOperations() {    

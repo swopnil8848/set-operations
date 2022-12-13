@@ -1,7 +1,11 @@
 import React, { useState,useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+import CeliFloor from './CeliFloor';
+import Cross from './Cross';
 import Factorial from './factorial';
+import Fats from './Fats';
 import FuzzySet from './FuzzySet';
+import Last from './Last';
 
 export default function SetOperations() {    
     const {register,handleSubmit,watch,setValue} = useForm({
@@ -58,6 +62,10 @@ export default function SetOperations() {
     }, [watch()])
 
     const fuzzy = document.getElementsByClassName("fuzzy");
+    const celiFloor = document.getElementsByClassName("celiFloor");
+    const last = document.getElementsByClassName("last");
+    const cross = document.getElementsByClassName("cross");
+    const factorail = document.getElementsByClassName("factorail");
 
     const scrollToFuzzy = () =>{
         window.scrollTo({
@@ -71,6 +79,30 @@ export default function SetOperations() {
             behavior:"smooth"
         })
     }
+    const scrollToCeli = () =>{
+        window.scrollTo({
+            top: celiFloor[0].offsetTop,
+            behavior:"smooth"
+        })
+    }
+    const scrollTolast = () =>{
+        window.scrollTo({
+            top: last[0].offsetTop,
+            behavior:"smooth"
+        })
+    }
+    const scrollTocorss = () =>{
+        window.scrollTo({
+            top: cross[0].offsetTop,
+            behavior:"smooth"
+        })
+    }
+    const scrollToFats = () =>{
+        window.scrollTo({
+            top: factorail[0].offsetTop,
+            behavior:"smooth"
+        })
+    }
     
     
   return (
@@ -78,6 +110,10 @@ export default function SetOperations() {
     <div className='fixed'>
         <p className='font-bold text-pink-900 p-4 bg-green-900 rounded-lg w-fit lab-2 my-5' onClick={scrollToTop}>SetOperations</p>
         <p className='font-bold text-pink-900 p-4 bg-green-900 rounded-lg w-fit lab-2 my-5' onClick={scrollToFuzzy}>Fuzzy set</p>
+        <p className='font-bold text-pink-900 p-4 bg-green-900 rounded-lg w-fit lab-2 my-5' onClick={scrollToCeli}>celling and floor</p>
+        <p className='font-bold text-pink-900 p-4 bg-green-900 rounded-lg w-fit lab-2 my-5' onClick={scrollTolast}>Fibonacci</p>
+        <p className='font-bold text-pink-900 p-4 bg-green-900 rounded-lg w-fit lab-2 my-5' onClick={scrollTocorss}>cartesian corss</p>
+        <p className='font-bold text-pink-900 p-4 bg-green-900 rounded-lg w-fit lab-2 my-5' onClick={scrollToFats}>cartesian corss</p>
     </div>
     <div className='bg-black h-screen flex justify-center  items-center'>
         <div className='bg-gray-700 rounded-lg p-10 w-[1000px]'>
@@ -95,6 +131,10 @@ export default function SetOperations() {
         </div>
     </div>
         <div className='fuzzy'><FuzzySet /></div>
+        <div className='celiFloor'><CeliFloor/></div>
+        <div className='last'><Last/></div>
+        <div className='cross'><Cross/></div>
+        <div className='factorail'><Fats/></div>
     </div>
   )
 }

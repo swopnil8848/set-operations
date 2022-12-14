@@ -8,7 +8,7 @@ const FuzzySet = () => {
     const [intersection,setIntersection] = useState('');
     const [check,setCheck] = useState(false);
     const [compA,setAcomp] = useState("");
-    const [compB,setComp] = useState("");
+    const [compB,setBcomp] = useState("");
     
     const {register,watch,handleSubmit} = useForm({
         defaultValues:{
@@ -185,7 +185,7 @@ const FuzzySet = () => {
             for (const property in union_fuz) {
                 Acomp_render += " ("+property + '/ ' + union_fuz[property]+'), ';
             }
-            setComp(Acomp_render);
+            setAcomp(Acomp_render);
 
         }, [watch()])
         

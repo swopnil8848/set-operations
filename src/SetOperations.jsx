@@ -5,6 +5,7 @@ import Cross from './Cross';
 import Factorial from './factorial';
 import Fats from './Fats';
 import FuzzySet from './FuzzySet';
+import Gcd from './Gcd';
 import Last from './Last';
 
 export default function SetOperations() {    
@@ -135,6 +136,7 @@ export default function SetOperations() {
         <div className='last'><Last/></div>
         <div className='cross'><Cross/></div>
         <div className='factorail'><Fats/></div>
+        <div className='gcd'><Gcd/></div>
     </div>
   )
 }

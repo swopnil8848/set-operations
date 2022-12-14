@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import CeliFloor from './CeliFloor';
 import Cross from './Cross';
-import Factorial from './factorial';
+// import Factorial from './factorial';
 import Fats from './Fats';
 import FuzzySet from './FuzzySet';
 import Gcd from './Gcd';

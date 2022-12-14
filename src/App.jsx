@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import New from './New';
 import SetOperations from './SetOperations';
-import Factorial from './factorial';
+// import Factorial from './factorial';
 import CeliFloor from './CeliFloor';
 import Last from './Last';
 import Cross from './Cross';
